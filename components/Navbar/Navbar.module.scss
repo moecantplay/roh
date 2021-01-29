@@ -1,0 +1,25 @@
+.navbarWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navbarButton {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbarLogo {
+  display: block;
+  width: 60px;
+  height: auto;
+  padding: 5px 10px;
+}

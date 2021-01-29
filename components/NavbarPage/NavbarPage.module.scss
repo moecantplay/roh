@@ -1,0 +1,135 @@
+.navListWrap {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navList {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  :global {
+    .swiper-container,
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.navListPagination {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 150px;
+  left: 35px;
+  z-index: 1;
+
+  &.navListHasActive {
+    :global {
+      .nav-list-item {
+        color: #b7babd;
+      }
+    }
+  }
+
+  :global {
+    .nav-list-item {
+      position: relative;
+      width: fit-content;
+      color: #000;
+      font-size: 16px;
+      letter-spacing: 1.33px;
+      user-select: none;
+      cursor: pointer;
+      transition: all 300ms;
+      z-index: 1;
+
+      &.swiper-pagination-bullet-active {
+        color: #000;
+      }
+
+      &:first-child {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+        text-indent: -99999em;
+        cursor: default;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.listItem {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.listImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.listAbout {
+  display: none;
+}
+
+.aboutChild {
+  display: block;
+  font-size: 0.875em;
+}
+
+@media (min-width: 768px) {
+  .navListPagination {
+    left: 40px;
+
+    :global {
+      .nav-list-item {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .listAbout {
+    display: block;
+    font-size: 10px;
+    color: #000;
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navListPagination {
+    top: 175px;
+    left: 120px;
+  }
+
+  .listAbout {
+    left: 120px;
+  }
+}
